@@ -23,5 +23,5 @@ pipeline {
                 sh 'node app.js'
 	    }
     	}
+    }
 }
-
