@@ -21,6 +21,7 @@ pipeline {
             steps {
                 // Este estágio inicia o servidor da aplicação
                 sh 'node app.js'
-    }
+	    }
+    	}
 }
 
