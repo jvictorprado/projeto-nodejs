@@ -12,7 +12,7 @@ const server = app.listen(port, () => {
 
 
 
-const timeoutInMilliseconds = 30000;
+const timeoutInMilliseconds = 60000;
 setTimeout(() => {
   console.log('Encerrando o servidor após o tempo limite...');
   server.close(() => {
