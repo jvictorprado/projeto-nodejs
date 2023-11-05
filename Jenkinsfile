@@ -2,19 +2,25 @@ pipeline {
     agent any
 
     stages {
-        
+
         stage('Checkout') {
             steps {
-                // Este estágio verifica o código-fonte do repositório Git
+                // Check Git repository source code
                 checkout scm
+            }
+        }
+
+        stage('version-check') {
+            steps {
+                sh 'node --version'
             }
         }
         
         stage('Run') {
             steps {
-                // Este estágio inicia o servidor da aplicação
                 sh 'node app.js'
-	    }
+	        }
     	}
+
     }
 }
